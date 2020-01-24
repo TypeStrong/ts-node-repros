@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-ts-node ./example.ts
+yarn
+yarn ts-node ./example.ts
