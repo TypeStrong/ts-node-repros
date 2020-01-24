@@ -17,4 +17,4 @@ jobs:
         uses: ./.github/runner@master
         with:
           entrypoint: /bin/bash
-          args: "-l -c \"/bin/bash ./run.sh\""
+          args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./run.sh\""
