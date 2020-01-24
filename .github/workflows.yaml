@@ -1,0 +1,12 @@
+name: Run reproduction
+on: [push]
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run
+        uses: ./.github/runner
+        id: run
+        run: ./run.sh
