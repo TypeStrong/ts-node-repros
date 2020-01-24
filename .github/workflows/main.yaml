@@ -9,4 +9,3 @@ jobs:
       - name: Run
         uses: ./.github/runner
         id: run
-        run: ./run.sh
