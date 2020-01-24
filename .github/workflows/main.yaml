@@ -7,9 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout
-        id: checkout
-
+        uses: actions/checkout@v2.0.0
       - name: Run
         uses: ./.github/runner
         id: run
