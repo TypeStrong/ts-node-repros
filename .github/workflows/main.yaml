@@ -11,8 +11,8 @@ jobs:
       - name: Build runner
         uses: ./.github/runner
         with:
-          entrypoint: /bin/bash -l -c echo Built
+          entrypoint: ["/bin/bash", "-l", "-c", "echo Built"]
       - name: Run
         uses: ./.github/runner
         with:
-          entrypoint: /bin/bash -l -c "/bin/bash ./run.sh"
+          entrypoint: ["/bin/bash", "-l", "-c", "/bin/bash ./run.sh"]
