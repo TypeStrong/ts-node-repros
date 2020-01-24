@@ -9,12 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.0.0
       - name: Build runner
-        uses: ./.github/runner
+        uses: ./.github/runner@master
         with:
           entrypoint: /bin/bash
           args: "-l -c \"echo Built\""
       - name: Run
-        uses: ./.github/runner
+        uses: ./.github/runner@master
         with:
           entrypoint: /bin/bash
           args: "-l -c \"/bin/bash ./run.sh\""
