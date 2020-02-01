@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
+n 12.13.0
 yarn
-yarn ts-node ./example.ts
+node -r ts-node/register/transpile-only  -r tsconfig-paths/register src/server.ts
