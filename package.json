@@ -2,13 +2,10 @@
   "name": "package1",
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "ts-script --skip-ignore npm-postinstall"
+    "postinstall": "ts-script --files npm-postinstall"
   },
   "dependencies": {
-    "ts-node": "latest",
+    "ts-node": "^8.6.2",
     "typescript": "latest"
-  },
-  "bundleDependencies": [
-    "ts-node"
-  ]
+  }
 }
