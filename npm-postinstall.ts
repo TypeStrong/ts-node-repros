@@ -4,6 +4,7 @@ console.dir({
     __filename,
     __dirname,
     module,
+    [`require.resolve('./x')`]: require.resolve('./x')
 });
 import * as x from './x';
 console.log('hello2', typeof x);
