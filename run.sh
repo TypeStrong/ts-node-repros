@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
-# Install a specific version of node
 n lts
 
-# Install package.json dependencies
-yarn
+# Install dependencies
+npm install
 
-# Run ts-node
-yarn ts-node ./example.ts
+# Create package
+npm pack
+
+cd other-project
+# Install the package
+npm install ../*.tgz
 
 echo "Process exited with code: $?"
 echo

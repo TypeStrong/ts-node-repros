@@ -1,4 +1,14 @@
 {
+  "name": "package1",
+  "version": "0.0.0",
+  "scripts": {
+    "postinstall": "ts-node --skip-ignore npm-postinstall"
+  },
+  "dependencies": {
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}{
   "dependencies": {
     "ts-node": "latest",
     "typescript": "latest"
