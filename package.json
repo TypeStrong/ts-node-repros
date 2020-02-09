@@ -5,7 +5,7 @@
     "postinstall": "ts-node --skip-ignore npm-postinstall"
   },
   "dependencies": {
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "ts-node": "latest",
+    "typescript": "latest"
   }
 }
