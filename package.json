@@ -2,7 +2,7 @@
   "name": "package1",
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "ts-node --skip-ignore npm-postinstall"
+    "postinstall": "ts-script --skip-ignore npm-postinstall"
   },
   "dependencies": {
     "ts-node": "latest",
