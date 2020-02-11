@@ -8,15 +8,19 @@ const Path = require('path');
 // }
 // console.timeEnd('create files');
 
-for(const dir of ['src', 'dist']) {
+for(const [dir, ext] of [
+    ['src', '.ts'],
+    ['dist', '.js']
+]) {
     console.time(`start ${dir}`);
     const durations: number[] = [];
     fs.readdirSync(Path.join(__dirname, dir)).forEach((v: string) => {
         // console.time(v);
         const before = Date.now();
-        require(`./${ dir }/` + v);
+        require(`./${ dir }/${ v }`);
         const duration = Date.now() - before;
         durations.push(duration);
+        // console.timeEnd(v);
     });
     console.timeEnd(`start ${dir}`);
     console.log(durations);
