@@ -4,19 +4,6 @@
       "rootDir": "src",
       "outDir": "dist",
       "moduleResolution": "node",
-      "jsx": "react",
-      "lib": ["es2015", "dom"],
-      "target": "es5",
-      "forceConsistentCasingInFileNames": true,
-      "noImplicitReturns": true,
-      "noImplicitThis": true,
-      "noImplicitAny": true,
-      "suppressImplicitAnyIndexErrors": true,
-      "noUnusedLocals": true,
-      "experimentalDecorators": true,
-      "typeRoots": [
-        "./node_modules/@types/"
-      ],
-      "types": ["node", "react"]
+      "types": ["node"]
     }
 }

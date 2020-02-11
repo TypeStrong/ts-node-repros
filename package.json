@@ -2,10 +2,6 @@
   "name": "tsnode-repro",
   "dependencies": {
     "@types/node": "latest",
-    "@types/react": "^16.7.21",
-    "@types/react-dom": "^16.0.11",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
     "ts-node": "latest",
     "typescript": "latest"
   }
