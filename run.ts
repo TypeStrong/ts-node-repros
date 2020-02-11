@@ -10,10 +10,14 @@ const Path = require('path');
 
 for(const dir of ['src', 'dist']) {
     console.time(`start ${dir}`);
+    const durations: number[] = [];
     fs.readdirSync(Path.join(__dirname, dir)).forEach((v: string) => {
-        console.time(v);
+        // console.time(v);
+        const before = Date.now();
         require(`./${ dir }/` + v);
-        console.timeEnd(v);
+        const duration = Date.now() - before;
+        durations.push(duration);
     });
     console.timeEnd(`start ${dir}`);
+    console.log(durations);
 }
