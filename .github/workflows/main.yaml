@@ -1,0 +1,20 @@
+name: Run reproduction
+on: [push]
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+      - name: Build runner
+        uses: TypeStrong/ts-node-repros/.github/runner@master
+        with:
+          entrypoint: /bin/bash
+          args: "-l -c \"echo Built\""
+      - name: Run
+        uses: TypeStrong/ts-node-repros/.github/runner@master
+        with:
+          entrypoint: /bin/bash
+          args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./run.sh\""
