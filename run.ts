@@ -1,5 +1,6 @@
 const fs = require('fs');
 const Path = require('path');
+const util = require('util');
 
 // console.time('create files');
 // for(let i = 0; i < 1000; i++) {
@@ -23,5 +24,5 @@ for(const [dir, ext] of [
         // console.timeEnd(v);
     });
     console.timeEnd(`start ${dir}`);
-    console.log(durations);
+    console.log(util.inspect(durations, {maxArrayLength: null}));
 }
