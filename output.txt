@@ -1,0 +1,170 @@
+{
+  args: {
+    includeBothFilesinScriptFileNames: false,
+    addResolvedModulesToScriptFileNames: false,
+    implementGetProjectVersion: false
+  },
+  'program1 === program2': false,
+  'program2 === program3': false,
+  'host.getScriptFileNames()': [ '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts' ],
+  'program3.getSourceFiles()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.es5.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.dom.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.webworker.importscripts.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.scripthost.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts'
+  ]
+}
+{
+  args: {
+    includeBothFilesinScriptFileNames: false,
+    addResolvedModulesToScriptFileNames: true,
+    implementGetProjectVersion: false
+  },
+  'program1 === program2': false,
+  'program2 === program3': false,
+  'host.getScriptFileNames()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts'
+  ],
+  'program3.getSourceFiles()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.es5.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.dom.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.webworker.importscripts.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.scripthost.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts'
+  ]
+}
+{
+  args: {
+    includeBothFilesinScriptFileNames: true,
+    addResolvedModulesToScriptFileNames: false,
+    implementGetProjectVersion: false
+  },
+  'program1 === program2': false,
+  'program2 === program3': false,
+  'host.getScriptFileNames()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts'
+  ],
+  'program3.getSourceFiles()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.es5.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.dom.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.webworker.importscripts.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.scripthost.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts'
+  ]
+}
+{
+  args: {
+    includeBothFilesinScriptFileNames: true,
+    addResolvedModulesToScriptFileNames: true,
+    implementGetProjectVersion: false
+  },
+  'program1 === program2': false,
+  'program2 === program3': false,
+  'host.getScriptFileNames()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts'
+  ],
+  'program3.getSourceFiles()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.es5.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.dom.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.webworker.importscripts.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.scripthost.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts'
+  ]
+}
+{
+  args: {
+    includeBothFilesinScriptFileNames: false,
+    addResolvedModulesToScriptFileNames: false,
+    implementGetProjectVersion: true
+  },
+  'program1 === program2': true,
+  'program2 === program3': true,
+  'host.getScriptFileNames()': [ '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts' ],
+  'program3.getSourceFiles()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.es5.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.dom.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.webworker.importscripts.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.scripthost.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts'
+  ]
+}
+{
+  args: {
+    includeBothFilesinScriptFileNames: false,
+    addResolvedModulesToScriptFileNames: true,
+    implementGetProjectVersion: true
+  },
+  'program1 === program2': true,
+  'program2 === program3': true,
+  'host.getScriptFileNames()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts'
+  ],
+  'program3.getSourceFiles()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.es5.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.dom.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.webworker.importscripts.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.scripthost.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts'
+  ]
+}
+{
+  args: {
+    includeBothFilesinScriptFileNames: true,
+    addResolvedModulesToScriptFileNames: false,
+    implementGetProjectVersion: true
+  },
+  'program1 === program2': true,
+  'program2 === program3': true,
+  'host.getScriptFileNames()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts'
+  ],
+  'program3.getSourceFiles()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.es5.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.dom.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.webworker.importscripts.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.scripthost.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts'
+  ]
+}
+{
+  args: {
+    includeBothFilesinScriptFileNames: true,
+    addResolvedModulesToScriptFileNames: true,
+    implementGetProjectVersion: true
+  },
+  'program1 === program2': true,
+  'program2 === program3': true,
+  'host.getScriptFileNames()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts'
+  ],
+  'program3.getSourceFiles()': [
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.es5.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.dom.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.webworker.importscripts.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/node_modules/typescript/lib/lib.scripthost.d.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/other.ts',
+    '/d/Personal-dev/@TypeStrong/ts-node-repros/foo/project/root.ts'
+  ]
+}
