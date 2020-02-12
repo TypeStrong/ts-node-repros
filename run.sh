@@ -6,6 +6,11 @@ n lts
 # Install package.json dependencies
 yarn
 
+set -x
+node --version
+yarn --version
+yarn tsc --version
+
 # Run ts-node
 yarn ts-node ./example.ts
 
