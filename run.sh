@@ -6,9 +6,6 @@ n lts
 # Install package.json dependencies
 yarn
 
-mkdir node_modules/foo/
-echo 'import * as React from "react"; export default <div />;' > node_modules/foo/bar.tsx
-
 # Run ts-node
 yarn ts-node ./example.ts
 
