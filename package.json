@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "ts-node": "latest",
+    "react": "^16.13.1",
+    "ts-node": "^8.8.1",
     "typescript": "latest"
   }
 }

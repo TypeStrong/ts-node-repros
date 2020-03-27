@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "jsx": "react",
+        "target": "ES6",
+        "lib": ["ES2019"]
+    }
+}
