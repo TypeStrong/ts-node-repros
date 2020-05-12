@@ -1,13 +1,18 @@
-# ts-node reproductions
+# ts-node debugging in VSCode
 
-If you find a bug in ts-node and file an issue, it's helpful -- even necessary -- to create a minimal reproduction of the bug.
+## Using Chrome / Edge DevTools
 
-This link explains why we ask for a minimal reproduction.  Thank you in advance!  
-https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff
+Open edge://inspect or chrome://inspect in browser.
 
-One way to do that is opening a pull-request on this repository with your reproduction.  Github Actions will execute `./run.sh`.
+```
+node --inspect-brk=127.0.0.1:9229 -r ts-no
+de/register ./src/index.ts
+# Might need 0.0.0.0 to deal with WSL2 networking; I'm not sure
+```
 
-You can put anything you want here: add/remove dependencies in `package.json`, change the commands in `run.sh`, change the code in `./example.ts`,
-or add a hundred more `.ts` files.
+## VSCode
 
-Once your pull request is submitted here, link to it in your ts-node bug report.
+Use the launch config in `.vscode/launch.json`.
+
+Set a breakpoint at the very top of your entrypoint file.  For some reason this is necessary to hit the first breakpoints in imported files.
+
