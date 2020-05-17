@@ -1,0 +1,17 @@
+{
+    "include": [],
+    "references": [{
+        "path": "./src-bug-occurring"
+    }, {
+        "path": "./src-bug-not-occurring"
+    }]
+}
+// {
+//         "compilerOptions": {
+//           "rootDir": "src-bug-occurring"
+//         },
+//         "include": [
+//           "src-bug-occurring/**/*"
+//         ]
+
+// }

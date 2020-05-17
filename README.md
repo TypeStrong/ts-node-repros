@@ -1,13 +1,15 @@
-# ts-node reproductions
+# Reproduction of TypeScript issue #38611
 
-If you find a bug in ts-node and file an issue, it's helpful -- even necessary -- to create a minimal reproduction of the bug.
+https://github.com/microsoft/TypeScript/issues/38611
 
-This link explains why we ask for a minimal reproduction.  Thank you in advance!  
-https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff
+To reproduce:
 
-One way to do that is opening a pull-request on this repository with your reproduction.  Github Actions will execute `./run.sh`.
+```
+npm install
+./node_modules/.bin/tsc --project ./src-bug-not-occurring # Compiles fine
+./node_modules/.bin/tsc --project ./src-bug-occurring # Throws semantic error
+```
 
-You can put anything you want here: add/remove dependencies in `package.json`, change the commands in `run.sh`, change the code in `./example.ts`,
-or add a hundred more `.ts` files.
+Both projects are identical except for a single line which triggers the bug.  It has a type annotation: `typeof import('../outside-of-rootdir/foo')`
 
-Once your pull request is submitted here, link to it in your ts-node bug report.
+When this annotation is added, `require()` expressions elsewhere in the file throw errors if they try to `require()` something outside of `rootDir`

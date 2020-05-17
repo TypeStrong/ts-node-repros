@@ -4,10 +4,12 @@
 n lts
 
 # Install package.json dependencies
-yarn
+npm install
 
-# Run ts-node
-yarn ts-node ./example.ts
+echo 'COMPILING SRC-BUG-NOT-OCCURRING'
+./node_modules/.bin/tsc --project ./src-bug-not-occurring
+echo 'COMPILING SRC-BUG-OCCURRING'
+./node_modules/.bin/tsc --project ./src-bug-occurring
 
 echo "Process exited with code: $?"
 echo
