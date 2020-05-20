@@ -2,17 +2,15 @@
 set -x
 
 # Install a specific version of node
-n lts
+#n lts
 
-mkdir benches
-
-for branch in master ab/realpath-and-emit-node_modules-files v7.0.1 v8.10.1 ; do
+for branch in 'TypeStrong/ts-node#master' 'TypeStrong/ts-node#ab/realpath-and-emit-node_modules-files' 'ts-node@v7.0.1' 'ts-node@v8.10.1' ; do
 # Install package.json dependencies
 rm -r node_modules || true
 rm package-lock.json || true
 npm install
 rm package-lock.json || true
-npm install "TypeStrong/ts-node#$branch"
+npm install "$branch"
 
 # Run ts-node
 time ./node_modules/.bin/tsc --project .
