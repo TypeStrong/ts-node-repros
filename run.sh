@@ -22,13 +22,11 @@ time ./node_modules/.bin/ts-node ./run.ts
 time ./node_modules/.bin/ts-node --files ./run.ts
 time ./node_modules/.bin/ts-node --transpile-only ./run.ts
 time ./node_modules/.bin/ts-node --files --transpile-only ./run.ts
-} > "benches/$branch.txt" 2>&1
+} >> "benches.txt" 2>&1
 
 done
 
-for bench in benches/*; do
-cat "$bench"
-done
+cat "benches.txt"
 
 echo "Process exited with code: $?"
 echo
