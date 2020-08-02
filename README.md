@@ -1,13 +1,13 @@
-# ts-node reproductions
+# maxNodeModuleJsDepth repros to understand how it works
 
-If you find a bug in ts-node and file an issue, it's helpful -- even necessary -- to create a minimal reproduction of the bug.
+Every time one file refers to another, if the target is within a node_modules directory, the target is considered "external"
+and is at +1 `nodeModuleJsDepth`
 
-This link explains why we ask for a minimal reproduction.  Thank you in advance!  
-https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff
+If `node_modules/foo/index.js` loads `node_modules/foo/other.js`, that is depth 2.  Doesn't matter that they're in the same module; it's about the number of files.
 
-One way to do that is opening a pull-request on this repository with your reproduction.  Github Actions will execute `./run.sh`.
+With `allowJs`, once you try to reference a file exceeding the max depth, the referenced file is an untyped module.  It doesn't produce any type info, so stuff is type `any`.
+And the body of the untyped file is not typechecked.  Even if you put a type error totally contained within a single file (`/** @type {string} */ const b = 123;`) if it is past the max depth, it's not checked.
 
-You can put anything you want here: add/remove dependencies in `package.json`, change the commands in `run.sh`, change the code in `./example.ts`,
-or add a hundred more `.ts` files.
+With `checkJs`, it's an error to try to require() something past the max depth.  But since the file is not resolved, the target file will still not be typechecked.
 
-Once your pull request is submitted here, link to it in your ts-node bug report.
+These limits don't apply to `.ts` files.  There is no max depth for them even when in `node_modules`.

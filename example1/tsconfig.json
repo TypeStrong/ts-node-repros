@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "maxNodeModuleJsDepth": 2,
+        "moduleResolution": "node",
+        "strict": true,
+        "outDir": "out",
+    },
+    "files": [
+        // "node_modules/foo/index.js",
+        "index.ts"
+    ]
+}
