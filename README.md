@@ -1,13 +1,32 @@
-# ts-node reproductions
+Proving that it works.
 
-If you find a bug in ts-node and file an issue, it's helpful -- even necessary -- to create a minimal reproduction of the bug.
+Run the following on Windows:
 
-This link explains why we ask for a minimal reproduction.  Thank you in advance!  
-https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff
+```
+yarn
+ts-node -vv
+node --experimental-specifier-resolution=node --loader ts-node/esm.mjs ./src/cli.ts
+```
 
-One way to do that is opening a pull-request on this repository with your reproduction.  Github Actions will execute `./run.sh`.
+Here is the output on my machine:
+```
+C:\Users\cspotcode\Documents\dev\ts-node-repros>yarn
+yarn install v1.22.4
+warning package.json: No license field
+warning No license field
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.14s.
 
-You can put anything you want here: add/remove dependencies in `package.json`, change the commands in `run.sh`, change the code in `./example.ts`,
-or add a hundred more `.ts` files.
+C:\Users\cspotcode\Documents\dev\ts-node-repros>ts-node -vv
+ts-node v8.10.2
+node v14.0.0
+compiler v3.9.7
 
-Once your pull request is submitted here, link to it in your ts-node bug report.
+C:\Users\cspotcode\Documents\dev\ts-node-repros>node --experimental-specifier-resolution=node --loader ts-node/esm.mjs ./src/cli.ts
+(node:11028) ExperimentalWarning: --experimental-loader is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+it works
+
+C:\Users\cspotcode\Documents\dev\ts-node-repros>
+```
