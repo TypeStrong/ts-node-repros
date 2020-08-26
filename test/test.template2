@@ -1,0 +1,9 @@
+import {expect} from 'chai';
+// import fizzbuzz from '../src/fizzbuzz';
+
+console.log('Required test.ts version 2 (this message should never print because this file has a TypeScript semantic error)');
+describe('fizzbuzz', () => {
+  it('input 1 return 1', () => {
+    expect(fizzbuzz(1)).to.equal('1');
+  });
+});

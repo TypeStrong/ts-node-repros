@@ -1,6 +1,13 @@
 {
   "dependencies": {
-    "ts-node": "latest",
-    "typescript": "latest"
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "scripts": {
+    "mocha-watch": "mocha --watch --require ts-node/register --reporter nyan --watch-extensions tsx,ts test/**/*.tsx test/**/*.ts"
   }
 }
