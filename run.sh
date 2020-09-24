@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install dependencies
-apt-get install expect
+apt-get install -y expect
 
 # Install a specific version of node
 n 12.18.3
