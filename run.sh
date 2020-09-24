@@ -4,7 +4,7 @@
 sudo apt install expect
 
 # Install a specific version of node
-n lts
+n 12.18.3
 
 # Install package.json dependencies
 npm install
