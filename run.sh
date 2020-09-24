@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
+# Install dependencies
+sudo apt install expect
+
 # Install a specific version of node
 n lts
 
 # Install package.json dependencies
-yarn
+npm install
 
-# Run ts-node
-yarn ts-node ./example.ts
+# Sanity-check version numbers
+./node_modules/.bin/ts-node -vv
+
+# Run a simulation of interactive REPL session
+expect ./script.exp
 
 echo "Process exited with code: $?"
 echo

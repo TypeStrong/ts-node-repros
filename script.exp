@@ -1,0 +1,31 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+# Launch shell
+spawn $env(SHELL)
+match_max 100000
+expect -exact "$ "
+
+# Launch REPL
+send -- "./node_modules/.bin/ts-node\r"
+
+# Type commands
+expect ">"
+send -- "let a = 32\r"
+expect ">"
+send -- "3 + 4\r"
+expect ">"
+send -- ".type a\r"
+expect ">"
+send -- "3 + 4\r"
+expect ">"
+
+# Ctrl-D out of the REPL
+send -- ""
+send -- ""
+expect "$"
+
+# Exit shell
+send -- "exit\r"
+expect eof
