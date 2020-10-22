@@ -1,6 +1,14 @@
 {
   "dependencies": {
     "ts-node": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "dnscache": "1.0.2",
+    "@types/node": "latest"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "ts-node": "ts-node src/index.ts",
+    "ts-node--files": "ts-node --files src/index.ts",
+    "tsc": "tsc"
   }
 }
