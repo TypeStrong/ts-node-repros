@@ -1,0 +1,3 @@
+[submodule "node-ts-error"]
+	path = node-ts-error
+	url = https://github.com/ngvcanh/node-ts-error.git
