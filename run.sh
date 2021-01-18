@@ -7,7 +7,8 @@ n lts
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+./node_modules/.bin/ts-node -vv
+node --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts
 
 echo "Process exited with code: $?"
 echo
