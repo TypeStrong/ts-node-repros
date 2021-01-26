@@ -8,6 +8,8 @@ yarn
 
 # Run ts-node
 yarn ts-node ./example.ts
+tsc ./example.ts
+node ./example.js
 
 echo "Process exited with code: $?"
 echo
