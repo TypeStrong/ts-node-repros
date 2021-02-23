@@ -5,8 +5,9 @@
     "typescript": "latest"
   },
   "ava": {
+    "extensions": ["ts"],
     "require": [
-			"ts-node/register"
-		]
+      "ts-node/register"
+    ]
   }
 }
