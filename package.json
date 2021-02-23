@@ -1,6 +1,12 @@
 {
   "dependencies": {
+    "ava": "latest",
     "ts-node": "latest",
     "typescript": "latest"
+  },
+  "ava": {
+    "require": [
+			"ts-node/register"
+		]
   }
 }
