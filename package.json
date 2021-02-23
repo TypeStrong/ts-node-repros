@@ -6,7 +6,12 @@
     "typescript": "latest"
   },
   "ava": {
-    "extensions": ["ts"],
+    "extensions": {
+      "ts": "module"
+    },
+    "nonSemVerExperiments": {
+      "configurableModuleFormat": true
+    },
     "nodeArguments": [
       "--loader", "ts-node/esm"
     ]
