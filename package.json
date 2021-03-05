@@ -1,5 +1,9 @@
 {
+  "type": "module",
   "dependencies": {
+    "@types/mocha": "latest",
+    "@types/node": "latest",
+    "mocha": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }

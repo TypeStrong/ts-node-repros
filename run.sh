@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # Install a specific version of node
-n lts
+n 15
 
 # Install package.json dependencies
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+yarn mocha
 
 echo "Process exited with code: $?"
 echo
