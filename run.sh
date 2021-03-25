@@ -7,9 +7,9 @@ n 12.16.1
 npm install -g npm-run-all gulp
 
 # install jq
-mkdir bin
-curl https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 > bin/jq
-chmod +x bin/jq
+# mkdir bin
+# curl https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 > bin/jq
+# chmod +x bin/jq
 export PATH="$PATH:$PWD/bin"
 # quick test to be sure it worked
 echo '{"foo": 1}' | jq .foo
