@@ -52,3 +52,4 @@ kill -9 "$job"
 echo "Process exited with code: $?"
 echo
 echo
+
