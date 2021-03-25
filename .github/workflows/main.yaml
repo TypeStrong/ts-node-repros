@@ -18,3 +18,9 @@ jobs:
         with:
           entrypoint: /bin/bash
           args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./run.sh\""
+      - name: Run outside docker (optional, only used in some reproductions)
+        run: |
+          if [ -f run2.sh ] ; then
+            echo $'------------\n------------\n\n\n'
+            bash ./run2.sh
+          fi
