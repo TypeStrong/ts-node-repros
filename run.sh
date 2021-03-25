@@ -4,7 +4,7 @@ set -x
 # Install a specific version of node
 n 12.16.1
 
-npm install -g npm-run-all
+npm install -g npm-run-all gulp
 
 # install jq
 mkdir bin
@@ -16,8 +16,8 @@ echo '{"foo": 1}' | jq .foo
 
 git clone https://github.com/cdr/code-server.git
 cd code-server
-git checkout main
-# git checkout jsjoeio/ts-node-repro
+# git checkout main
+git checkout jsjoeio/ts-node-repro
 yarn
 
 waittime=60
