@@ -43,6 +43,9 @@ jobs:
           args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./run.sh\""
 
       # run2.sh
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.16.1'
       - name: Run
         if: steps.check_files_2.outputs.files_exists == 'true'
         run: |
