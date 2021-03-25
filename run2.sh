@@ -2,17 +2,19 @@
 set -x
 
 # Install a specific version of node
-# nvm 12.16.1
+n 12.16.1
 
 git clone https://github.com/code-asher/ts-node-repro
 cd ts-node-repro
 
 yarn
-yarn ts-node index.ts
 
+# Doesn't work (on v12).
+yarn ts-node index.ts
+code=$?
+
+# Should work.
 yarn add ts-node@9.0.0
 yarn ts-node index.ts
 
-echo "Process exited with code: $?"
-echo
-echo
+exit $code
