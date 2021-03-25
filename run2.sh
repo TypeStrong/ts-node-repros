@@ -4,7 +4,7 @@ set -x
 # Install a specific version of node
 nvm 12.16.1
 
-git clone https://github.com/code-asher/ts-node-repro/blob/master/index.ts
+git clone https://github.com/code-asher/ts-node-repro
 cd ts-node-repro
 
 yarn
