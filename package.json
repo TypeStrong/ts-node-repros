@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "@types/node": "^14.14.37",
     "ts-node": "latest",
     "typescript": "latest"
+  },
+  "scripts": {
+    "start": "ts-node ./src/index.ts"
   }
 }

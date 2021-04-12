@@ -4,10 +4,12 @@
 n lts
 
 # Install package.json dependencies
-yarn
+npm install
+npm install -g ts-node
 
 # Run ts-node
-yarn ts-node ./example.ts
+ts-node ./src/index.ts
+npm run start
 
 echo "Process exited with code: $?"
 echo
