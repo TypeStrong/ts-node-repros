@@ -1,1 +1,4 @@
-console.log('Some .ts code reproducing a bug');
+import * as foobar from './foobar';
+
+console.log(foobar.foo);
+console.log(foobar.bar);
