@@ -10,6 +10,7 @@ cd ts-node-repro
 yarn
 
 # Doesn't work (on v12).
+yarn add TypeStrong/ts-node#main
 yarn ts-node -vv
 yarn ts-node index.ts
 code=$?
