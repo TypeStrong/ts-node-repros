@@ -8,6 +8,7 @@ git clone https://github.com/code-asher/ts-node-repro
 cd ts-node-repro
 
 npm install
+export TS_NODE_TRANSPILE_ONLY=true
 
 # Doesn't work (on v12).
 npm install TypeStrong/ts-node#main
