@@ -10,14 +10,17 @@ cd ts-node-repro
 yarn
 
 # Doesn't work (on v12).
+yarn ts-node -vv
 yarn ts-node index.ts
 code=$?
 
 yarn add ts-node@latest
+yarn ts-node -vv
 yarn ts-node index.ts
 
 # Should work.
 yarn add ts-node@9.0.0
+yarn ts-node -vv
 yarn ts-node index.ts
 
 exit $code
