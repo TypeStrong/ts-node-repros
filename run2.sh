@@ -7,20 +7,20 @@ sudo n 12.16.1
 git clone https://github.com/code-asher/ts-node-repro
 cd ts-node-repro
 
-yarn
+npm install
 
 # Doesn't work (on v12).
-yarn add TypeStrong/ts-node#main
+npm install TypeStrong/ts-node#main
 yarn ts-node -vv
 yarn ts-node index.ts
 code=$?
 
-yarn add ts-node@latest
+npm install ts-node@latest
 yarn ts-node -vv
 yarn ts-node index.ts
 
 # Should work.
-yarn add ts-node@9.0.0
+npm install ts-node@9.0.0
 yarn ts-node -vv
 yarn ts-node index.ts
 
