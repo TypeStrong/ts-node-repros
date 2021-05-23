@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/node": "^15.6.0",
     "ts-node": "latest",
     "typescript": "latest"
   }

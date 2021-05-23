@@ -6,8 +6,11 @@ n lts
 # Install package.json dependencies
 yarn
 
-# Run ts-node
+# Run ts-node with entrypoint
 yarn ts-node ./example.ts
+
+# Run ts-node REPL
+echo $'\n' | yarn ts-node -i
 
 echo "Process exited with code: $?"
 echo
