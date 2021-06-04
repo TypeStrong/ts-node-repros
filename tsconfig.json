@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "typeRoots": ["./types", "./node_modules/@types"],
+        "types": ["@mailchimp/mailchimp_marketing"]
+    },
+    "include": ["src"]
+}
