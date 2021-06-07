@@ -7,7 +7,8 @@ n lts
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+yarn workspace workspace-a start
+yarn workspace workspace-a start:throng
 
 echo "Process exited with code: $?"
 echo
