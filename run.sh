@@ -8,6 +8,7 @@ yarn
 
 # Run ts-node
 yarn ts-node ./example.ts
+USE_THRONG=1 yarn ts-node ./example.ts
 
 echo "Process exited with code: $?"
 echo

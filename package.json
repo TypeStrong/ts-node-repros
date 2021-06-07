@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@types/node": "^15.12.1",
+    "throng": "^5.0.0",
     "ts-node": "latest",
     "typescript": "latest"
   }
