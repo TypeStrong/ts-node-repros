@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "ts-node": "latest",
+    "ts-node": "TypeStrong/ts-node#main",
     "typescript": "latest"
   }
 }

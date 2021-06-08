@@ -7,7 +7,10 @@ n lts
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+echo '
+  const a: types.EitherOr<string, number> = Math.random() > 0.5 ? "hello world" : 123;
+  const b: types.EitherOr<string, number> = {thisShouldBe: "a type error"};
+' | yarn ts-node ./example.ts
 
 echo "Process exited with code: $?"
 echo
