@@ -1,0 +1,7 @@
+{
+  "name": "commonjs-resolver-corner-cases",
+  "scripts": {
+    "test:patch": "TS_NODE_TRY_TS_EXTS=true npm exec --package=https://github.com/calebboyd/ts-node.git#re-resolve-hack -c 'ts-node -T test.js'",
+    "test:ts-node": "npm exec --package=ts-node -c 'ts-node -T --prefer-ts-exts test.js'"
+  }
+}
