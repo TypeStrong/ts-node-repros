@@ -4,10 +4,7 @@
 npm install
 
 # Run ts-node
-echo '
-  const a: Types.EitherOr<string, number> = Math.random() > 0.5 ? "hello world" : 123;
-  const b: Types.EitherOr<string, number> = {thisShouldBe: "a type error"};
-' | ./node_modules/.bin/ts-node ./example.ts
+./node_modules/.bin/ts-node --compiler-options '{"strict":true}' ./example.ts
 
 echo "Process exited with code: $?"
 echo
