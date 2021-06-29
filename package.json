@@ -1,5 +1,7 @@
 {
+  "type": "module",
   "dependencies": {
+    "meow": "^10.0.1",
     "ts-node": "latest",
     "typescript": "latest"
   }

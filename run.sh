@@ -7,7 +7,7 @@ n lts
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+node --loader ts-node/esm ./example.ts
 
 echo "Process exited with code: $?"
 echo
