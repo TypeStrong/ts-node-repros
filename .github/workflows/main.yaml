@@ -31,13 +31,13 @@ jobs:
       # run.sh
       - name: Build runner
         if: steps.check_files_1.outputs.files_exists == 'true'
-        uses: TypeStrong/ts-node-repros/.github/runner@master
+        uses: TypeStrong/ts-node-repros/.github/runner@main
         with:
           entrypoint: /bin/bash
           args: "-l -c \"echo Built\""
       - name: Run
         if: steps.check_files_1.outputs.files_exists == 'true'
-        uses: TypeStrong/ts-node-repros/.github/runner@master
+        uses: TypeStrong/ts-node-repros/.github/runner@main
         with:
           entrypoint: /bin/bash
           args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./run.sh\""
