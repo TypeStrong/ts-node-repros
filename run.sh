@@ -7,7 +7,7 @@ n lts
 yarn
 
 # Run ts-node
-node --loader ts-node/esm ./example.ts
+node --loader ts-node/esm ./example.ts unicorns --rainbow
 
 echo "Process exited with code: $?"
 echo
