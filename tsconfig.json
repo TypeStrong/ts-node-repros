@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "jsx": "react",
+        "jsxFactory": "createCell",
+        "target": "ES6",
+        "lib": ["ES2019"]
+    }
+}

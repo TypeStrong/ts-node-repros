@@ -1,6 +1,16 @@
 {
   "dependencies": {
-    "ts-node": "latest",
-    "typescript": "latest"
+    "boot-cell": "^1.0.0-rc.2",
+    "classnames": "^2.2.6",
+    "jsdom": "^16.2.1",
+    "react": "^16.13.1",
+    "ts-node": "^8.8.1",
+    "typescript": "latest",
+    "web-cell": "^2.0.0-rc.20",
+    "web-utility": "^0.13.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^16.1.1",
+    "@types/node": "^12.12.31"
   }
 }
