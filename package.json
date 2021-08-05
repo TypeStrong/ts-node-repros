@@ -5,6 +5,7 @@
   "dependencies": {
     "ts-node": "latest",
     "typescript": "latest",
-    "tap": "latest"
+    "tap": "latest",
+    "@types/node": "latest"
   }
 }
