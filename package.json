@@ -1,6 +1,10 @@
 {
+  "scripts: {
+  "test": "tap --ts"
+},
   "dependencies": {
     "ts-node": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "tap: "latest"
   }
 }
