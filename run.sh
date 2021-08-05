@@ -7,7 +7,7 @@ n lts
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+yarn run test
 
 echo "Process exited with code: $?"
 echo
