@@ -7,5 +7,5 @@ const { C } = t.mock("./f.ts", {
 
 t.test("DosStub", (t) => {
   t.throws(function() {new C()}, 'foo')
-  t.done
+  t.end()
 });
