@@ -5,7 +5,7 @@ set -x
 
 mkdir -p ~/.n
 export N_PREFIX="$PWD/.n"
-
+export PATH="$PWD/.n/bin:$PATH"
 
 function doTest() {
   node --version
