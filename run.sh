@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
 # Install a specific version of node
-n lts
+n 12
 
 # Install package.json dependencies
-yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+echo 'console.log(123)' | npx ts-node
 
 echo "Process exited with code: $?"
 echo
