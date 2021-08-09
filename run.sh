@@ -3,6 +3,9 @@
 set +e
 set -x
 
+mkdir -p ~/.n
+export N_PREFIX="$PWD/.n"
+
 # Install a specific version of node
 n 12
 
