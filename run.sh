@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# Install a specific version of node
-n 12
-
 set +e
 set -x
+
+# Install a specific version of node
+n 12
 
 node --version
 npm --version
