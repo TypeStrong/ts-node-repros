@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@types/node": "^16.7.4",
     "ts-node": "latest",
+    "tslog": "^3.2.1",
     "typescript": "latest"
   }
 }

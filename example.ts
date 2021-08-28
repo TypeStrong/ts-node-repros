@@ -1,1 +1,3 @@
-console.log('Some .ts code reproducing a bug');
+import { logger } from "./logger";
+
+logger.info("hi");
