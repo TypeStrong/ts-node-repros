@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install a specific version of node
-n lts
+sudo n lts
 
 # Install package.json dependencies
 yarn
