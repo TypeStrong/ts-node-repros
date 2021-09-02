@@ -1,1 +1,2 @@
-console.log('Some .ts code reproducing a bug');
+import path from 'path';
+console.log(path.resolve('.'));
