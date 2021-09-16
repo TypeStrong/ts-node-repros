@@ -1,0 +1,11 @@
+{
+  "require": [
+    "global-jsdom/register",
+    "ts-node/register"
+  ],
+  "extension": [ "js", "jsx", "ts", "tsx" ],
+  "checkLeaks": true,
+  "recursive": true,
+  "colors": true,
+  "R": "spec"
+}
