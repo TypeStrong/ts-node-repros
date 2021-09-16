@@ -1,6 +1,7 @@
 {
   "require": [
-    "ts-node/register"
+    "test/helper.js",
+    "@babel/register"
   ],
   "extension": [ "js", "jsx", "ts", "tsx" ],
   "checkLeaks": true,
