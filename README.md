@@ -5,8 +5,7 @@
 Open edge://inspect or chrome://inspect in browser.
 
 ```
-node --inspect-brk=127.0.0.1:9229 -r ts-no
-de/register ./src/index.ts
+node --inspect-brk=127.0.0.1:9229 -r ts-node/register ./src/index.ts
 # Might need 0.0.0.0 to deal with WSL2 networking; I'm not sure
 ```
 
