@@ -6,8 +6,11 @@ n lts
 # Install package.json dependencies
 yarn
 
-# Run ts-node
-yarn ts-node ./example.ts
+# Works
+TS_NODE_SCOPE=true yarn ts-node b/index.ts --project b/tsconfig.json
+
+# Fails with "Emit skipped" error
+yarn ts-node b/index.ts --project b/tsconfig.json --scope
 
 echo "Process exited with code: $?"
 echo

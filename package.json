@@ -1,4 +1,9 @@
 {
+  "private": true,
+  "workspaces": [
+    "a",
+    "b"
+  ],
   "dependencies": {
     "ts-node": "latest",
     "typescript": "latest"
