@@ -7,7 +7,7 @@ n lts
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+yarn ts-node --project ./tsconfig.json ./example.ts
 
 echo "Process exited with code: $?"
 echo
