@@ -3,5 +3,5 @@ const example = async () => {
     console.log(other)
 }
 
-example()
+example().then(() => console.log(`done`))
 
