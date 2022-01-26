@@ -6,13 +6,15 @@ n lts
 # Install package.json dependencies
 yarn
 
+set -x
 # Run tsc
-yarn tsc || true
-
+echo '-=-=-=-=- Test 1 =-=-=-=-=-'
+yarn tsc --project tsconfig-with-baseurl-no-paths.json || true
+echo '-=-=-=-=- Test 2 =-=-=-=-=-'
+yarn tsc --project tsconfig-with-baseurl-and-paths-1.json || true
+echo '-=-=-=-=- Test 3 =-=-=-=-=-'
+yarn tsc --project tsconfig-with-baseurl-and-paths-2.json || true
 echo '-=-=-=-=-=-=-=-=-=-'
-
-# Get extra module resolution info
-yarn tsc --traceResolution || true
 
 echo "Process exited with code: $?"
 echo

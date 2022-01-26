@@ -3,7 +3,7 @@
     "noEmit": true,
     "baseUrl": "./src",
     "paths": {
-      "*": ["*"]
+      "map-to-nested-directory/*": ["nested-directory/*"]
     }
   },
 }
