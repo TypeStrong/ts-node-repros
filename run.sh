@@ -6,8 +6,13 @@ n lts
 # Install package.json dependencies
 yarn
 
-# Run ts-node
-yarn ts-node ./example.ts
+# Run tsc
+yarn tsc || true
+
+echo '-=-=-=-=-=-=-=-=-=-'
+
+# Get extra module resolution info
+yarn tsc --traceResolution || true
 
 echo "Process exited with code: $?"
 echo
