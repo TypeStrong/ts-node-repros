@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "ts-node": "latest",
+    "typescript": "latest"
+  },
+  "volta": {
+    "node": "17.6.0"
+  }
+}
