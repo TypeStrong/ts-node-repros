@@ -1,0 +1,21 @@
+diff --git a/lib/index.js b/lib/index.js
+index 05a8697fa0a271c5a23eae67d2c902ed62bcaff5..0e869f3cbc953324746a70b8f0389c033df572fa 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -1,7 +1,5 @@
+ const path = require('path');
+ 
+-const smsPath = path.dirname(require.resolve('source-map-support'));
+-
+ const createPattern = function(pattern) {
+   return {pattern: pattern, included: true, served: true, watched: false};
+ };
+@@ -9,7 +7,7 @@ const createPattern = function(pattern) {
+ const init = function(files) {
+   files.unshift(createPattern(path.join(__dirname, 'client.js')));
+   files.unshift(
+-    createPattern(path.join(smsPath, 'browser-source-map-support.js'))
++    createPattern(require.resolve('source-map-support/browser-source-map-support.js'))
+   );
+ };
+ 
