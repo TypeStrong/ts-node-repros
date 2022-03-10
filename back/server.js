@@ -1,4 +1,4 @@
-import {getErrorMessage} from './common/getErrorMessage';
+import {getErrorMessage} from './common/getErrorMessage.js';
 
 console.log();
 console.log();

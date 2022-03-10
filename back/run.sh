@@ -7,7 +7,7 @@ n 17.6.0
 npm install
 
 # Run ts-node
-node --loader=ts-node/esm --experimental-specifier-resolution=node server.ts
+node server.js
 
 echo "Process exited with code: $?"
 echo
