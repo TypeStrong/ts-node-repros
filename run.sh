@@ -7,7 +7,8 @@ n lts
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+yarn ts-node --transpileOnly ./example.ts
+##           ^ without this flag, it will work as expected
 
 echo "Process exited with code: $?"
 echo
