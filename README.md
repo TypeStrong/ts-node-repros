@@ -1,13 +1,5 @@
-# ts-node reproductions
+# Unhelpful Error When Using `noEmitHelpers: true`
 
-If you find a bug in ts-node and file an issue, it's helpful -- even necessary -- to create a minimal reproduction of the bug.
+TL;DR: If you use `noEmitHelpers: true`, and try to use `ts-node` to run a script with no imports or exports which requires a `tslib` function, it will complain it can't be found. Neither installing `tslib` nor using `importHelpers: true` will save you, even though they both seem like they should.
 
-This link explains why we ask for a minimal reproduction.  Thank you in advance!  
-https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff
-
-One way to do that is opening a pull-request on this repository with your reproduction.  Github Actions will execute `./run.sh`.
-
-You can put anything you want here: add/remove dependencies in `package.json`, change the commands in `run.sh`, change the code in `./example.ts`,
-or add a hundred more `.ts` files.
-
-Once your pull request is submitted here, link to it in your ts-node bug report.
+More detail in the bug report:

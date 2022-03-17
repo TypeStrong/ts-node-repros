@@ -1,1 +1,3 @@
-console.log('Some .ts code reproducing a bug');
+for (const num of [1, 2, 3]) {
+  console.log(num);
+}

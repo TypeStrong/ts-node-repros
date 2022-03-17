@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+
+    // this isn't necessary to cause the error but does make the problem harder to track down
+    // "importHelpers": true,
+
+    "noEmitHelpers": true,
+  }
+}
