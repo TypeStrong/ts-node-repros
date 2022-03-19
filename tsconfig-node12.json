@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist-node12",
+        "module": "Node12"
+    }
+}

@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
-# Install a specific version of node
-n lts
-
 # Install package.json dependencies
 yarn
 
-# Run ts-node
-yarn ts-node ./example.ts
+# Compile
+yarn tsc --project ./tsconfig-node12.json
+yarn tsc --project ./tsconfig-nodenext.json
+
+# Run
+node ./dist-node12/example.js
+node ./dist-nodenext/example.js
 
 echo "Process exited with code: $?"
 echo
