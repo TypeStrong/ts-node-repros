@@ -1,6 +1,21 @@
 {
+  "type": "module",
   "dependencies": {
+    "@swc/core": "latest",
+    "cross-env": "^7.0.3",
+    "jest": "latest",
+    "jest-light-runner": "latest",
     "ts-node": "latest",
     "typescript": "latest"
+  },
+  "jest": {
+    "runner": "jest-light-runner",
+    "transform": {},
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ]
+  },
+  "scripts": {
+    "test": "cross-env \"NODE_OPTIONS=--loader ts-node/esm\" jest"
   }
 }
