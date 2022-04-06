@@ -7,7 +7,14 @@ n lts
 yarn
 
 # Run ts-node
-yarn ts-node ./example.ts
+npm run bot:dev
+npm run shard:dev
+# build it
+tsc
+echo "I dont know how to replace the path in one of the builded files, more info in Readme"
+# run builded version
+npm run bot:prod
+npm run shard:prod
 
 echo "Process exited with code: $?"
 echo
