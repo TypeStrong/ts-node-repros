@@ -1,13 +1,51 @@
-# ts-node reproductions
+# steps to reproduce
+your output may vary depending on your username or if your using another shell but the overall output should be the same
 
-If you find a bug in ts-node and file an issue, it's helpful -- even necessary -- to create a minimal reproduction of the bug.
+- run `npm i`
+- run `npm run bot:dev`
+    - this should work fine without any problems
+    - output:
+    ```bash
+    snoweuph@SnoweuphDesktop:/media/data/workspace/Projects/ts-node-repros$ npm run bot:dev
 
-This link explains why we ask for a minimal reproduction.  Thank you in advance!  
-https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff
+    > bot:dev
+    > ts-node ./bot.ts
 
-One way to do that is opening a pull-request on this repository with your reproduction.  Github Actions will execute `./run.sh`.
+    This bot is logged in
+    ```
+- run `npm run shard:dev`
+    this should trough the error
+    ```bash
+    /media/data/workspace/Projects/ts-node-repros/bot.ts:1
+    import { Client, Intents } from 'discord.js';
+    ^^^^^^
 
-You can put anything you want here: add/remove dependencies in `package.json`, change the commands in `run.sh`, change the code in `./example.ts`,
-or add a hundred more `.ts` files.
+    SyntaxError: Cannot use import statement outside a module
+    ```
+- run `tsc`
+- open the ./build/bot.js and replace the path to the bot file
+    - replace `'./bot.ts'`
+    - with `'./build/bot.js'`
+- run `npm run bot:prod`
+    - this hould work fine
+    - output:
+    ```bash
+    snoweuph@SnoweuphDesktop:/media/data/workspace/Projects/ts-node-repros$ npm run bot:prod
 
-Once your pull request is submitted here, link to it in your ts-node bug report.
+    > bot:prod
+    > node ./build/bot.js
+
+    This bot is logged in
+    ```
+- run `npm run shard:prod`
+    - this hould work fine
+    - output:
+    ```bash
+    snoweuph@SnoweuphDesktop:/media/data/workspace/Projects/ts-node-repros$ npm run shard:prod
+
+    > shard:prod
+    > node ./build/sharded.js
+
+    Launched shard 0
+    This bot is logged in
+    ```

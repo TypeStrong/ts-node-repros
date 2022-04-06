@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "bot:dev": "ts-node ./bot.ts",
+    "shard:dev": "ts-node ./sharded.ts",
+    "bot:prod": "node ./build/bot.js",
+    "shard:prod": "node ./build/sharded.js"
+  },
   "dependencies": {
+    "discord.js": "^13.6.0",
     "ts-node": "latest",
     "typescript": "latest"
   }
