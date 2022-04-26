@@ -1,6 +1,11 @@
 {
   "dependencies": {
+    "newrelic": "^8.10.0",
     "ts-node": "latest",
     "typescript": "latest"
+  },
+  "devDependencies": {
+    "@types/newrelic": "^7.0.3",
+    "tsconfig-paths": "^3.14.1"
   }
 }
