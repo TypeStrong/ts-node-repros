@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@types/node": "^17.0.34",
+    "nyc": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }
