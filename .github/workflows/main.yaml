@@ -10,9 +10,11 @@ jobs:
         uses: actions/checkout@v2.0.0
 
       #
+      # NOTE THIS IS DISABLED all repros run on the ubuntu host
+      #
       # Conditional logic allows reproductions to choose between 2x test environments:
-      #   run.sh is executed within the docker container
-      #   run2.sh is executed on the github actions ubuntu host
+      #   run.sh is executed on the github actions ubuntu host
+      #   run2.sh is executed within the docker container
       #
       # Reproductions should either have a run.sh or run2.sh, not both
       #
@@ -22,31 +24,32 @@ jobs:
         uses: andstor/file-existence-action@v1
         with:
           files: "run.sh"
-      - name: Check file existence
-        id: check_files_2
-        uses: andstor/file-existence-action@v1
-        with:
-          files: "run2.sh"
+
+      # - name: Check file existence
+      #   id: check_files_2
+      #   uses: andstor/file-existence-action@v1
+      #   with:
+      #     files: "run2.sh"
 
       # run.sh
-      - name: Build runner
-        if: steps.check_files_1.outputs.files_exists == 'true'
-        uses: TypeStrong/ts-node-repros/.github/runner@master
-        with:
-          entrypoint: /bin/bash
-          args: "-l -c \"echo Built\""
       - name: Run
         if: steps.check_files_1.outputs.files_exists == 'true'
-        uses: TypeStrong/ts-node-repros/.github/runner@master
-        with:
-          entrypoint: /bin/bash
-          args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./run.sh\""
-
-      # run2.sh
-      - name: Run
-        if: steps.check_files_2.outputs.files_exists == 'true'
         run: |
-          if [ -f run2.sh ] ; then
+          if [ -f run.sh ] ; then
             echo $'------------\n------------\n\n\n'
-            bash ./run2.sh
+            bash ./run.sh
           fi
+
+      # # run2.sh
+      # - name: Build runner
+      #   if: steps.check_files_2.outputs.files_exists == 'true'
+      #   uses: TypeStrong/ts-node-repros/.github/runner@main
+      #   with:
+      #     entrypoint: /bin/bash
+      #     args: "-l -c \"echo Built\""
+      # - name: Run
+      #   if: steps.check_files_1.outputs.files_exists == 'true'
+      #   uses: TypeStrong/ts-node-repros/.github/runner@main
+      #   with:
+      #     entrypoint: /bin/bash
+      #     args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./run2.sh\""
