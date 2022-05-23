@@ -5,6 +5,7 @@ n lts
 
 yarn
 
+TS_NODE_DEBUG=true \
 yarn test
 
 echo "Process exited with code: $?"
