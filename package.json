@@ -1,6 +1,21 @@
 {
+  "name": "mocha-ts-node",
+  "type": "module",
+  "scripts": {
+    "test": "mocha test.ts"
+  },
   "dependencies": {
-    "ts-node": "latest",
-    "typescript": "latest"
+    "@rdfjs/term-set": "2.0.1",
+    "@types/mocha": "9.1.1",
+    "@types/rdfjs__term-set": "2.0.0",
+    "mocha": "9.2.2",
+    "ts-node": "10.8.0",
+    "typescript": "4.6.4"
+  },
+  "mocha": {
+    "loader": "ts-node/esm",
+    "extension": [
+      "ts"
+    ]
   }
 }
