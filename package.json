@@ -1,6 +1,18 @@
 {
   "dependencies": {
+    "@types/node": "^17.0.21",
+    "karma": "^6.3.17",
+    "karma-source-map-support": "^1.4.0",
+    "puppeteer": "^13.5.1",
     "ts-node": "latest",
     "typescript": "latest"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-jasmine": "^4.0.1"
+  },
+  "packageManager": "yarn@3.2.0",
+  "resolutions": {
+    "karma-source-map-support": "patch:karma-source-map-support@npm:1.4.0#.yarn/patches/karma-source-map-support-npm-1.4.0-b31519ef26.patch"
   }
 }
