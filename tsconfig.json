@@ -1,17 +1,11 @@
 {
+  "ts-node": {
+    "swc": true
+  },
   "compilerOptions": {
-    "noEmit": true,
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "isolatedModules": true,
+    "target": "ESNext",
+    "module": "NodeNext",
 
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
+    "experimentalDecorators": true,
   }
 }
