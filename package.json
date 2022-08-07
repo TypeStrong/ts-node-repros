@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "marked-plaintext": "^0.0.2",
     "ts-node": "latest",
     "typescript": "latest"
   }

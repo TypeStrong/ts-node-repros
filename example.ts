@@ -1,1 +1,1 @@
-console.log('Some .ts code reproducing a bug');
+import m from "marked-plaintext";
