@@ -1,0 +1,11 @@
+{
+  "require": [
+    "test/helper.js",
+    "@babel/register"
+  ],
+  "extension": [ "js", "jsx", "ts", "tsx" ],
+  "checkLeaks": true,
+  "recursive": true,
+  "colors": true,
+  "R": "spec"
+}
