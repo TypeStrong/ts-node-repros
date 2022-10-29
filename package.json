@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "ts-node": "latest",
-    "typescript": "latest"
-  }
-}

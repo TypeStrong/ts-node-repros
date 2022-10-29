@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "inlineSourceMap": true,
+        "rootDir": "src",
+        "outDir": "out",
+    }
+}
