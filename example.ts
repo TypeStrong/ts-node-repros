@@ -1,1 +1,9 @@
-console.log('Some .ts code reproducing a bug');
+function a() {}
+
+function b() {}
+
+function f() {
+  throw new Error("e");
+}
+
+f();
