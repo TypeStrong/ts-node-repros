@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": ".typescript",
+    "plugins": [
+      {
+        "type": "program",
+        "transform": "./transform.js",
+        "visitor": "./visitor"
+      }
+    ]
+  },
+  "references": [
+    { "path": "./subapp" }
+  ],
+  "files": ["root.ts"]
+}
