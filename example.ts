@@ -1,1 +1,1 @@
-console.log('Some .ts code reproducing a bug');
+console.log('Hello world!');
