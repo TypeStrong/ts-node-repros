@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "workspace-a",
+  "private": true,
+  "scripts": {
+    "start": "TS_NODE_DEBUG=1 ts-node-transpile-only bin/example",
+    "start:throng": "TS_NODE_DEBUG=1 USE_THRONG=1 ts-node-transpile-only bin/example"
+  },
+  "dependencies": {
+    "@types/node": "^15.12.1",
+    "throng": "^5.0.0",
+    "ts-node": "latest",
+    "typescript": "latest"
+  }
+}
