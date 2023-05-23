@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
 
-# Install a specific version of node
-sudo n 20
-
-# Install package.json dependencies
+# Run on Node 18
+sudo n lts
 yarn
-
 yarn ts-node -vv
-
-# Run ts-node
 yarn node --experimental-loader ts-node/esm ./example.ts
 
-n lts
+# Run on Node 20
+sudo n 20
+yarn
+yarn ts-node -vv
 yarn node --experimental-loader ts-node/esm ./example.ts
 
 echo "Process exited with code: $?"
