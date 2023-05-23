@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install a specific version of node
-n 20
+sudo n 20
 
 # Install package.json dependencies
 yarn
