@@ -9,7 +9,7 @@ yarn
 yarn ts-node -vv
 
 # Run ts-node
-yarn node  --experimental-loader ts-node/esm ./example.ts
+yarn node --experimental-loader ts-node/esm ./example.ts
 
 echo "Process exited with code: $?"
 echo
