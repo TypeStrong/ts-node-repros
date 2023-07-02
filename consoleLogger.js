@@ -1,3 +1,3 @@
-const process = require('process')
+import { setUncaughtExceptionCaptureCallback } from 'node:process'
 
-process.setUncaughtExceptionCaptureCallback(console.error)
+setUncaughtExceptionCaptureCallback(console.error)

@@ -16,7 +16,7 @@ yarn node --experimental-loader ts-node/esm ./example.ts
 sudo n nightly
 yarn
 yarn ts-node -vv
-yarn node --require=./consoleLogger.js --experimental-loader ts-node/esm ./example.ts
+yarn node --import=./consoleLogger.js --experimental-loader ts-node/esm ./example.ts
 
 echo "Process exited with code: $?"
 echo
