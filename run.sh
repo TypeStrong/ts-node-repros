@@ -12,6 +12,12 @@ yarn
 yarn ts-node -vv
 yarn node --experimental-loader ts-node/esm ./example.ts
 
+# Run on Node nightly
+sudo n nightly
+yarn
+yarn ts-node -vv
+yarn node --experimental-loader ts-node/esm ./example.ts
+
 echo "Process exited with code: $?"
 echo
 echo
