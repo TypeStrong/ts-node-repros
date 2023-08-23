@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "ts-node": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "@swc/core": "^1.2.95",
+    "@swc/helpers": "^0.2.13"
   }
 }
