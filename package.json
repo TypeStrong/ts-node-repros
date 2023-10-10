@@ -1,6 +1,7 @@
 {
   "dependencies": {
+    "@bluelovers/tsconfig": "^1.0.34",
     "ts-node": "latest",
-    "typescript": "latest"
+    "typescript": ">=5.3.0-dev"
   }
 }
