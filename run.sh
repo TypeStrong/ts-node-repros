@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install a specific version of node
-n v20
+n v18.19.0
 
 # Install package.json dependencies
 yarn
