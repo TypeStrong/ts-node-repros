@@ -7,7 +7,7 @@ nvm install 20.10.0
 pnpm install
 
 # Run ts-node
-pnpm ts-node ./src/index.ts
+pnpm ts-node ./src/index.js
 
 echo "Process exited with code: $?"
 echo
