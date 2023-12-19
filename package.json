@@ -2,5 +2,10 @@
   "dependencies": {
     "ts-node": "latest",
     "typescript": "latest"
-  }
+  },
+  "engines": {
+    "node": ">=20.6.0",
+    "pnpm": ">=8.0.0"
+  },
+  "type": "module"
 }

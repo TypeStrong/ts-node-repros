@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # Install a specific version of node
-n lts
+nvm install 20.10.0
 
 # Install package.json dependencies
-yarn
+pnpm install
 
 # Run ts-node
-yarn ts-node ./example.ts
+pnpm ts-node ./src/index.ts
 
 echo "Process exited with code: $?"
 echo
