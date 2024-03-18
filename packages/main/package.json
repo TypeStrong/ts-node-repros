@@ -1,0 +1,8 @@
+{
+  "name": "@tsnode-exports/main",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@tsnode-exports/ts-config": "*"
+  }
+}
