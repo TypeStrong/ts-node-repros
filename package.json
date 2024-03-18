@@ -1,6 +1,21 @@
 {
-  "dependencies": {
-    "ts-node": "latest",
-    "typescript": "latest"
+  "name": "@tsnode-exports/workspace-root",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "tsc": "cd packages/main && rm -rf dist && tsc && node dist/index.js",
+    "ts-node": "cd packages/main && ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
   }
 }

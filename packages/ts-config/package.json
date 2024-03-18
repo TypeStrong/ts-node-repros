@@ -1,0 +1,8 @@
+{
+  "name": "@tsnode-exports/ts-config",
+  "version": "1.0.0",
+  "description": "A shared configuration for TypeScript projects",
+  "exports": {
+    "./tsconfig.json": "./configs/tsconfig.json"
+  }
+}

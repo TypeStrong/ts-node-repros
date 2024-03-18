@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
 # Install a specific version of node
-n lts
+n v20.11.0
 
 # Install package.json dependencies
-yarn
+npm ci
+
+# Run tsc
+npm run tsc
 
 # Run ts-node
-yarn ts-node ./example.ts
+npm run ts-node
 
 echo "Process exited with code: $?"
 echo
